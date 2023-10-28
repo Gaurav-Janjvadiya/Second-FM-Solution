@@ -122,21 +122,26 @@ svg{
 }
 
 
-@media (max-width:375px) {
+@media screen and (max-width: 650px){
+    body{
+        height: 110%;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
     main{
-        height: 90%;
-        width: calc(375px - 7%);
+        height: 100%;
+        width: 96%;
         flex-direction: column;
     }
     #one{
-        height: 42%;
+        height: 50%;
         width: 100%;
         background-image: url(./images/image-product-mobile.jpg);
         border-top-right-radius: 0.6rem;
         border-bottom-left-radius: 0;
     }
     #two{
-        height: 58%;
+        height: 60%;
         width: 100%;
         border-top-right-radius: 0;
         border-bottom-left-radius: 0.6rem;
