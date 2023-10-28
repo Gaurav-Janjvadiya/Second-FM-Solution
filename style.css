@@ -5,6 +5,11 @@
     --font-Montserrat:'Montserrat';
     --font-Fraunces:'Fraunces';
     --font-gsize: 14px;
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
 }
 *{
     padding: 0;
@@ -17,7 +22,7 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:   hsl(30, 38%, 92%);
+    background-color:   var(--Cream);
 }
 
 main{
@@ -28,7 +33,6 @@ main{
     border-radius: 0.6rem;
 }
 #one{
-    height: 100%;
     width: 50%;
     background-image: url(./images/image-product-desktop.jpg); 
     background-size: cover;
@@ -36,11 +40,11 @@ main{
     border-bottom-left-radius: 0.6rem;
 }
 #two{
-    gap: 0.5rem;
-    padding: 1.3rem;
-    height: 100%;
     width: 50%;
-    background-color: hsl(0, 0%, 100%);
+    overflow:hidden;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--White);
     border-top-right-radius: 0.6rem;
     border-bottom-right-radius: 0.6rem;
     display: flex;
@@ -53,7 +57,7 @@ main{
     letter-spacing: 3px;
     font-family: var(--font-Montserrat);
     font-size: var(--font-gsize);
-    color: hsl(228, 12%, 48%);
+    color: var(--Dark-grayish-blue);
     font-weight: 500;
 }
 
@@ -62,7 +66,7 @@ main{
     flex-wrap: wrap;
     font-size: 2rem;
     font-family: var(--font-Fraunces);
-    color: hsl(212, 21%, 14%);
+    color: var(--Very-dark-blue);
     font-weight: 700;
 }
 
@@ -71,7 +75,7 @@ main{
     flex-wrap: wrap;
     align-items: flex-start;
     font-family: var(--font-Montserrat);
-    color: hsl(228, 12%, 48%);
+    color: var(--Dark-grayish-blue);
     font-size: var(--font-gsize);
 }
 
@@ -86,25 +90,25 @@ main{
     font-family: var(--font-Fraunces);
     font-size: 2rem;
     font-weight: 700;
-    color:  hsl(158, 36%, 37%);
+    color:  var(--Dark-cyan);
 }
 
 .smalldol{
     text-decoration: line-through;
     font-size: var(--font-gsize);
-    color: hsl(228, 12%, 48%);
+    color: var(--Dark-grayish-blue);
     font-family: var(--font-Montserrat);
 }
 
 button{
     all: initial;
-    height: 15%;
-    width: 100%;
+    height: 60px;
+    width: 215px;
     display: flex;
-    color: hsl(0, 0%, 100%);
+    color: var(--White);
     justify-content: center;
     align-items: center;
-    background-color:  hsl(158, 36%, 37%);
+    background-color:  var(--Dark-cyan);
     border: none;
     font-family: var(--font-Montserrat);
     font-weight: 700;
@@ -124,12 +128,16 @@ svg{
 
 @media screen and (max-width: 650px){
     body{
-        height: 110%;
+        /* padding-top: 10vh;
+        padding-bottom: 10vh; */
+        height: 110vh;
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
     main{
-        height: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        height: 102vh;
         width: 96%;
         flex-direction: column;
     }
@@ -141,13 +149,14 @@ svg{
         border-bottom-left-radius: 0;
     }
     #two{
-        height: 60%;
         width: 100%;
         border-top-right-radius: 0;
         border-bottom-left-radius: 0.6rem;
     }
 
     button{
+        height: 40px;
+        width: 317px;
         border: none;
     }
 }
