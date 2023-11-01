@@ -128,21 +128,20 @@ svg{
 
 @media screen and (max-width: 650px){
     body{
-        /* padding-top: 10vh;
-        padding-bottom: 10vh; */
-        height: 110vh;
+        
+        height: 100vh;
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
     main{
-        padding-top: 4vh;
-        padding-bottom: 4vh;
-        height: 102vh;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
         width: 96%;
         flex-direction: column;
     }
     #one{
-        height: 50%;
+        height: 40%;
         width: 100%;
         background-image: url(./images/image-product-mobile.jpg);
         border-top-right-radius: 0.6rem;
@@ -156,7 +155,11 @@ svg{
 
     button{
         height: 40px;
-        width: 317px;
+        width: 85vw;
         border: none;
+    }
+
+    button:active{
+        background-color: hsl(158, 36%, 25%);
     }
 }
